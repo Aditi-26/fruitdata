@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web project</title>
+    <style>
+      body{
+        background-color: darkgray;
+      }
+      h1{
+        text-align: center;
+        padding-top: 5px;
+        color:darkslategray;
+        font-size:30px;
+        padding-left: 5%;
+      }
+      .main-class{
+        font-size:20px;
+        color:hsla(240, 89%, 26%, 0.847);
+        margin-left: 0%;
+        text-align: center;
+      }
+      .button1{
+        margin-top:10px;
+        margin-left:12%;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 13px;
+        background-color: darkslategrey;
+        width:70px;
+      }
+      input{
+        width:30%;
+        box-sizing: border-box;
+        padding:7px;
+        margin:5px;
+      }
+      #p1{
+        font-size:25px ;
+        color:darkslategray;
+      }
+      #p2{
+        font-size:25px ;
+        color:darkslategray;
+      }
+      #fruit2{
+        margin-left:10% ;
+      } 
+      .main-list{
+        border:2px solid black;
+        outline: #555 solid 20px;
+        margin:auto;
+        padding:10px;
+        text-align:center;
+        width:30%;
+        margin-top:5%;
+        margin-left: 40%;
+      }
+      .listitem{
+        background:#ccc;
+        padding:30px;
+        margin:0px;
+        border-radius:10px;
+        box-shadow:0 0 10px #ccc;
+        margin-bottom:10px;
+      }
+      .listitem p{
+        padding:0px;
+        margin:0px;
+        margin-top:5px;
+        font-size:14px;
+        color:#555;
+      }
+      textarea{
+        margin-left:12%;
+      }
+      #div3{
+        padding-left: 12%;
+      }
+    </style> 
+</head>
+<body>
+  <h1>WELCOME!</h1>
+  <p style="padding-left:5%; text-align:center;" id="p1">Adding data to firebase</p>
+  <div class="main-class">
+    <div id="div1"><label>Enter Fruit name:</label>
+    <input id="fruitname" placeholder="name" type="text" required="required"></div>
+    <div id="div2"><label>Enter image url:</label>
+    <input type="url" id="fruiturl" placeholder="url..">
+    <div id="div3"><label>Enter Description:</label></div>
+    <textarea id="fruitdesc"rows="10" cols="55" placeholder="desc" required="required"></textarea>
+    <div id="btn1"><button onclick="storeData()" class="button1">ADD</button></div>
+  </div>
+  <p style="padding-left:5%; text-align:center;" id="p1">Retrieved data from firebase</p>
+  <div class="main-list" id="list_div">
+    <div class="listitem">
+      <p>Fruit Name:<p>
+      <p>Image URL:</p>
+      <p>Description:</p>
+    </div>
+  </div>
+
+  </div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBR0JX7rpse6UqLD3N71SOyprwIJi44wFw",
+    authDomain: "projectfirst-16dca.firebaseapp.com",
+    databaseURL: "https://projectfirst-16dca.firebaseio.com",
+    projectId: "projectfirst-16dca",
+    storageBucket: "projectfirst-16dca.appspot.com",
+    messagingSenderId: "314092853264",
+    appId: "1:314092853264:web:eb6d80234c5eb7ba31d295"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="index.js"></script>
+</body>
+</html>
